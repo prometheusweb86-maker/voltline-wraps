@@ -44,10 +44,10 @@ export const stats = [
 ]
 
 export const gallery = [
-  { frame: 1, label: 'Matte black — before' },
-  { frame: 120, label: 'Panels off, film peeling' },
-  { frame: 150, label: 'Prep & disassembly' },
-  { frame: 195, label: 'Film going on' },
-  { frame: 225, label: 'Satin blue taking shape' },
-  { frame: 240, label: 'Finished satin blue wrap' },
+  { frame: 1, label: 'Satin blue wrap, finished' },
+  { frame: 45, label: 'Bonnet and doors open' },
+  { frame: 85, label: 'Panels coming off' },
+  { frame: 125, label: 'Full strip-down' },
+  { frame: 165, label: 'Every component, laid out' },
+  { frame: 200, label: 'Ready for film' },
 ]

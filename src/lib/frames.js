@@ -1,4 +1,4 @@
-export const FRAME_COUNT = 240
+export const FRAME_COUNT = 200
 const pad = (i) => String(i + 1).padStart(3, '0')
 export const webpUrl = (i) => `/frames-webp/ezgif-frame-${pad(i)}.webp`
 export const jpgUrl = (i) => `/frames/ezgif-frame-${pad(i)}.jpg`

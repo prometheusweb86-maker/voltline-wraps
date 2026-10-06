@@ -34,7 +34,7 @@ export default function Gallery() {
     <section id="gallery" className="section" ref={ref}>
       <div className="wrap">
         <p className="eyebrow" data-reveal>The work</p>
-        <h2 className="section-title" data-reveal>From factory black to custom blue</h2>
+        <h2 className="section-title" data-reveal>Inside a full-wrap build</h2>
         <div className="gallery">
           {gallery.map((g, i) => (
             <button key={g.frame} className="g-item" data-reveal data-delay={(i % 3) * 0.08} onClick={() => setOpen(i)} aria-label={`Open: ${g.label}`}>

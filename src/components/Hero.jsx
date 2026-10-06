@@ -19,10 +19,10 @@ function drawFrame(ctx, img, cw, ch, dpr) {
   const portrait = cw / ch < 1.05
   let s, x, y
   if (portrait) {
-    // fit the car (x 24%–97% of the frame) across the width, park it in the upper part of the screen
-    const span = 0.66
+    // fit the car (x 24%–100% of the frame) across the width, park it in the upper part of the screen
+    const span = 0.76
     s = w / (IMG_W * span)
-    x = -0.27 * IMG_W * s
+    x = -0.24 * IMG_W * s
     y = h * 0.1
   } else {
     // object-fit: cover, anchored on the focal point
@@ -166,8 +166,8 @@ export default function Hero() {
         <div className="hero-glow" aria-hidden="true" />
         {still ? (
           <picture>
-            <source srcSet={webpUrl(FRAME_COUNT - 1)} type="image/webp" />
-            <img className="hero-canvas" src={jpgUrl(FRAME_COUNT - 1)} alt="Car with a freshly applied satin blue wrap" />
+            <source srcSet={webpUrl(0)} type="image/webp" />
+            <img className="hero-canvas" src={jpgUrl(0)} alt="Car in a satin blue wrap" />
           </picture>
         ) : (
           <canvas ref={canvas} className="hero-canvas" role="img" aria-label="Scroll animation: a car is disassembled, wrapped in film and rebuilt in satin blue" />
@@ -176,7 +176,7 @@ export default function Hero() {
         <div className="hero-fade" aria-hidden="true" />
 
         <div className="overlays">
-          <div className="ov ov-0" style={still ? { display: 'none' } : undefined}>
+          <div className="ov ov-0" >
             <p className="eyebrow">Vehicle wraps · PPF · Customisation</p>
             <h1>{site.tagline}</h1>
             <p className="lead">{site.subline}</p>
@@ -190,7 +190,7 @@ export default function Hero() {
               <div className="ov ov-1">
                 <p className="eyebrow">01 · Prep</p>
                 <h2>Precision Disassembly</h2>
-                <p className="lead">We remove trims, handles and panels so film tucks around every edge. No cut lines, no lifting corners, no shortcuts.</p>
+                <p className="lead">We open her up and remove trims, handles and panels so film tucks around every edge. No cut lines, no lifting corners, no shortcuts.</p>
               </div>
               <div className="ov ov-2">
                 <p className="eyebrow">02 · Material</p>
@@ -200,21 +200,14 @@ export default function Hero() {
               <div className="ov ov-3">
                 <p className="eyebrow">03 · Result</p>
                 <h2>The Finished Product</h2>
-                <p className="lead">Rebuilt, polished and handed back looking like it left the factory that way.</p>
+                <p className="lead">Every component cleaned, wrapped and refitted, then handed back looking like it left the factory that way.</p>
                 <div className="cta-row">
                   <a className="btn btn-primary" href="#contact" onClick={(e) => { e.preventDefault(); scrollToId('#contact') }}>Book your transformation</a>
                 </div>
               </div>
             </>
           )}
-          {still && (
-            <div className="ov ov-still">
-              <p className="eyebrow">03 · Result</p>
-              <h2>The Finished Product</h2>
-              <a className="btn btn-primary" href="#contact" onClick={(e) => { e.preventDefault(); scrollToId('#contact') }}>Book your transformation</a>
-            </div>
-          )}
-        </div>
+                  </div>
 
         {!still && (
           <>

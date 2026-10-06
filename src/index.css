@@ -58,14 +58,15 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
 .hero-still .hero-stage { position: relative; }
 
 .overlays { position: absolute; inset: 0; pointer-events: none; }
-.ov { position: absolute; left: max(6vw, 20px); top: 50%; translate: 0 -50%; width: min(36vw, 520px); pointer-events: auto; }
+.ov { position: absolute; left: max(4vw, 20px); top: 50%; translate: 0 -50%; width: min(26vw, 400px); pointer-events: auto; }
+.ov-0 { width: min(34vw, 500px); }
 .ov:not(.ov-0) { opacity: 0; visibility: hidden; }
 .ov h1 { font-size: clamp(3rem, 5.4vw, 5.6rem); margin-bottom: 20px; }
 .ov h2 { font-size: clamp(2.2rem, 4.4vw, 4.2rem); margin-bottom: 18px; }
 .lead { color: #b8c5ca; font-size: clamp(.98rem, 1.15vw, 1.12rem); margin: 0 0 28px; max-width: 46ch; }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
 .ov-still { opacity: 1 !important; visibility: visible !important; }
-.hint { position: absolute; left: max(6vw, 20px); bottom: 34px; display: flex; align-items: center; gap: 14px; font-size: .72rem; letter-spacing: .25em; text-transform: uppercase; color: var(--muted); }
+.hint { position: absolute; left: max(4vw, 20px); bottom: 34px; display: flex; align-items: center; gap: 14px; font-size: .72rem; letter-spacing: .25em; text-transform: uppercase; color: var(--muted); }
 .hint i { width: 1px; height: 38px; background: linear-gradient(var(--cyan), transparent); animation: drip 1.8s ease-in-out infinite; transform-origin: top; }
 @keyframes drip { 0% { transform: scaleY(0); } 60% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
 .progress-track { position: absolute; right: 18px; top: 50%; translate: 0 -50%; height: 160px; width: 2px; background: rgba(232,238,240,.14); border-radius: 2px; overflow: hidden; }
