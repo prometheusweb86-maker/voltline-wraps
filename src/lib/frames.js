@@ -1,7 +1,7 @@
 export const FRAME_COUNT = 200
 const pad = (i) => String(i + 1).padStart(3, '0')
-export const webpUrl = (i) => `/frames-webp/ezgif-frame-${pad(i)}.webp`
-export const jpgUrl = (i) => `/frames/ezgif-frame-${pad(i)}.jpg`
+export const webpUrl = (i) => `/frames-webp/ezgif-frame-${pad(i)}.webp?v=2`
+export const jpgUrl = (i) => `/frames/ezgif-frame-${pad(i)}.jpg?v=2`
 
 export function loadFrame(i) {
   return new Promise((resolve) => {

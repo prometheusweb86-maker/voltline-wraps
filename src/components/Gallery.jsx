@@ -3,8 +3,8 @@ import { gallery } from '../config'
 import useReveal from '../lib/useReveal'
 
 const pad = (n) => String(n).padStart(3, '0')
-const webp = (n) => `/frames-webp/ezgif-frame-${pad(n)}.webp`
-const jpg = (n) => `/frames/ezgif-frame-${pad(n)}.jpg`
+const webp = (n) => `/frames-webp/ezgif-frame-${pad(n)}.webp?v=2`
+const jpg = (n) => `/frames/ezgif-frame-${pad(n)}.jpg?v=2`
 
 function Pic({ n, alt, ...rest }) {
   return (
